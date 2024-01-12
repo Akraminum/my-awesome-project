@@ -10,3 +10,4 @@ class GoalBriefSerializer(serializers.ModelSerializer):
     class Meta:
         model = Goal
         fields = ('id', 'name', "total_targets_count", "achieved_targets_count")  
+
