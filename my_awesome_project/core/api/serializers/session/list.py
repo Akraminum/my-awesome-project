@@ -1,6 +1,7 @@
 from rest_framework import serializers
-from my_awesome_project.core.models import Session
-from my_awesome_project.core.models import Task
+
+from my_awesome_project.core.models import Session, Task
+
 from ..task.nested import TaskBriefSerializer
 
 
@@ -10,9 +11,9 @@ class SessionListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Session
         fields = [
-            'id',
+            "id",
             "task",
             # "task_id",
             "minutes",
-            "datetime"
+            "datetime",
         ]
