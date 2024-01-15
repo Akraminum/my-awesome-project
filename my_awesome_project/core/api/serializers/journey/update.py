@@ -6,7 +6,4 @@ from my_awesome_project.core.models import Journey
 class JourneyUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Journey
-        fields = (
-            "id",
-            "name",
-        )
+        fields = ("id", "name",)

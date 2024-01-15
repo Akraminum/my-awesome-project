@@ -5,24 +5,24 @@ from django.db import models
 class JourneyManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(is_active=True)
-
+    
     def get_journey_by_id(self, id):
         return self.get_queryset().filter(id=id).first()
-
+    
     def get_journey_by_name(self, name):
         return self.get_queryset().filter(name=name).first()
-
+    
     def get_journey_by_origin(self, origin):
         return self.get_queryset().filter(origin=origin).first()
-
+    
     def get_journey_by_destination(self, destination):
         return self.get_queryset().filter(destination=destination).first()
-
+    
     def get_journey_by_price(self, price):
         return self.get_queryset().filter(price=price).first()
-
+    
     def get_journey_by_date(self, date):
         return self.get_queryset().filter(date=date).first()
-
+    
     def get_journey_by_time(self, time):
         return self.get_queryset().filter(time=time).first()

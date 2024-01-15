@@ -5,7 +5,6 @@ from my_awesome_project.core.models import Goal
 
 class GoalDetailSerializer(serializers.ModelSerializer):
     ...
-
     class Meta:
         model = Goal
-        fields = "__all__"
+        fields = '__all__'
