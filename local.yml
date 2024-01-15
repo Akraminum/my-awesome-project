@@ -35,6 +35,12 @@ services:
     env_file:
       - ./.envs/.local/.postgres
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
   # docs:
   #   image: my_awesome_project_local_docs
   #   container_name: my_awesome_project_local_docs

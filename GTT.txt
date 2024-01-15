@@ -9,16 +9,16 @@ users:
 
 
 user dashboard:
-	- as a user I want see a statistical view of my progresses and achievements???  
-	- 
-	-  
+	- as a user I want see a statistical view of my progresses and achievements???
+	-
+	-
 
 journey:
 	- as a user I want to create, edit and remove my journeys
 	- as a user I want to add, update or remove journy's image
 	- as a user I want to add, update or remove chapter to each of my journys
 	- as a user I want to set my journy as ended
-	- 
+	-
 	- as a user I want to see a statistical view of my progresses and achievements of a journy
 
 Goal:
@@ -26,7 +26,7 @@ Goal:
 	- as a user I want to add, update or remove goal's image
 	- as a user I want to add, update or remove <stories> to each of my goals
 	- as a user I want to set my goal as achieved
-	- 
+	-
 	- as a user I want to see a statistical view of my progresses and achievements of a goal
 
 Target:
@@ -34,45 +34,23 @@ Target:
 	- as a user I want to add, update or remove target's image
 	- as a user I want to add, update or remove <notes> to each of my targets
 	- as a user I want to set my target as achieved
-	- 
+	-
 	- as a user I want to see a statistical view of my progresses and achievements of a goal
 
 Task:
 	- as a user I want to create, edit and remove my tasks
 	- as a user I want to set my task as done
-	- as a user I want to 
-	- 
+	- as a user I want to
+	-
 	- as a user I want to see a statistical view of my progresses and achievements of a goal
 
 Session:
 	- as a user I want to
-	
+
 templates:
 	- as an admin I want to creat and publish a template target
 	- as a user I want to publish a target as a template
 	- as a user I want to browse template targets
 	- as a user I want to filter template targets by goal and search them by title, description
 	- as a user I want to clone template target and attach to one of my goals
-	- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	-
