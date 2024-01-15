@@ -4,4 +4,4 @@ from .sessions import Session
 from .target import Target
 from .task import Task
 
-# journey_step
+all = [Goal, Journey, Session, Target, Task]

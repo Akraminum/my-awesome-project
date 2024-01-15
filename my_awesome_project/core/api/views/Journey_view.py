@@ -1,18 +1,8 @@
-from django.db.models import Count, Prefetch, Q
 from drf_spectacular.utils import extend_schema
 from rest_framework import viewsets
-from rest_framework.decorators import action
-from rest_framework.filters import OrderingFilter
-from rest_framework.response import Response
 
-from my_awesome_project.core.api.serializers.journey.create import JourneyCreateSerializer
-from my_awesome_project.core.api.serializers.journey.detail import JourneyDetailSerializer
 from my_awesome_project.core.api.serializers.journey.list import JourneyListSerializer
-from my_awesome_project.core.api.serializers.journey.update import JourneyUpdateSerializer
-from my_awesome_project.core.managers.JourneyManager import JourneyManager
-from my_awesome_project.core.models import Goal, Journey
-
-# /journeys/<name>/goals/<name>/targets/<name>/tasks/<name>/sessions/<id>
+from my_awesome_project.core.models import Journey
 
 
 @extend_schema(tags=["1-Journeys"])
