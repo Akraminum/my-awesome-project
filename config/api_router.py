@@ -18,7 +18,11 @@ router.register("targets", TargetViewSet, basename="targets")
 router.register("tasks", TaskViewSet, basename="tasks")
 router.register("sessions", SessionViewSet, basename="sessions")
 
+from my_awesome_project.web.views import JourneyViewSet as WebJourneyViewSet
+from django.urls import path
 
-urlpatterns = []
+urlpatterns = [
+    path("web/", WebJourneyViewSet.as_view(), name="web"),
+]
 app_name = "api"
-urlpatterns = router.urls
+urlpatterns += router.urls
