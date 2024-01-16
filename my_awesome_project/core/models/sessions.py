@@ -7,6 +7,7 @@ from .task import Task
 class Session(TimeStampedModel):
     minutes = models.IntegerField()
     datetime = models.DateTimeField(auto_now_add=True)
+    notes = models.TextField(blank=True)
 
     task = models.ForeignKey(
         Task,

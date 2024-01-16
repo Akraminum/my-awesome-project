@@ -5,7 +5,7 @@ from my_awesome_project.core.models import Goal
 
 
 class GoalListSerializer(serializers.ModelSerializer):
-    journey = JourneyDetailSerializer()
+    # journey = JourneyDetailSerializer()
 
     class Meta:
         model = Goal
