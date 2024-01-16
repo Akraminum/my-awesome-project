@@ -13,6 +13,8 @@
     {% include 'partial/styles.html' %}
   </head>
   <body class="nav-md">
+    
+
     <div class="container body">
       <div class="main_container">
         
@@ -28,14 +30,23 @@
 
 
         <!-- page content -->
-        {% include "page_content.html" %}
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                {% block content %}{% endblock %}
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- /page content -->
 
         <!-- footer content -->
         {% include "footer.html" %}
-        <!-- /footer content -->
+        <!-- /footer content --> 
 
-        
+
+
       </div>
     </div>
 

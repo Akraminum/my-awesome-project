@@ -1,29 +1,8 @@
 <!-- templates/falcon.html -->
 {% extends "base.html" %}
 
-{% block heading %}
-  
-{{block.super}}
-<p>Name: {{page}}</p>
-
-{% endblock heading %}
-
-{% block side_content %}
-
-{% endblock side_content %}
 
 
-{% block main_content %}
-  
-<ul>
-    {% for journey in result %}
-      <li> {{journey.id}} &mdash; {{journey.name}} &mdash; {{journey.created}}</li>
-    {% empty %}
-      <li> <i>There are no goodies available</i> </li>
-    {% endfor %}
-</ul>
-
-{% endblock main_content %}
 
 
 
