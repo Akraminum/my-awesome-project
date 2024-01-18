@@ -30,14 +30,13 @@
 
 
         <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                {% block content %}{% endblock %}
-              </div>
-            </div>
-          </div>
+        {% comment %} {% include "content.html" %} {% endcomment %}
+        <div class="right_col" role="main" style="min-height: 676px;">
+          {% comment %}  {% endcomment %}
+          
+          {% comment %} HTML goes here {% endcomment %}
+          
+          {% comment %}   {% endcomment %}
         </div>
         <!-- /page content -->
 

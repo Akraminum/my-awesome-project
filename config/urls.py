@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
+from django.views.generic import TemplateView
 
 urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
@@ -30,3 +31,8 @@ if settings.DEBUG:
         import debug_toolbar
 
         urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+
+
+urlpatterns += [
+    path("web/", TemplateView.as_view(template_name="index.html"), name="web"),
+]
