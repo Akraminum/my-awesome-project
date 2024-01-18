@@ -22,17 +22,17 @@ sessions_patterns = tasks_patterns + r"/(?P<task_id>\d+)/sessions"
 router.register("journeys", JourneyViewSet, basename="journeys")
 
 # /journeys/journey_id/goals
-router.register( goals_patterns , GoalViewSet, basename="journey-goals")
-# router.register("goals", GoalViewSet, basename="goals")
+# router.register( goals_patterns , GoalViewSet, basename="journey-goals")
+router.register("goals", GoalViewSet, basename="goals")
 
-router.register( targets_patterns , TargetViewSet, basename="goal-targets")
-# router.register("targets", TargetViewSet, basename="targets")
+# router.register( targets_patterns , TargetViewSet, basename="goal-targets")
+router.register("targets", TargetViewSet, basename="targets")
 
-router.register( tasks_patterns , TaskViewSet, basename="target-tasks")
+router.register( r"targets/(?P<target_id>\d+)/tasks" , TaskViewSet, basename="target-tasks")
 # router.register("tasks", TaskViewSet, basename="tasks")
 
 # /tasks/task_id/sessions
-router.register(sessions_patterns, SessionViewSet, basename="task-sessions")
+router.register(r"targets/(?P<target_id>\d+)/sessions", SessionViewSet, basename="task-sessions")
 # router.register("sessions", SessionViewSet, basename="sessions")
 
 
