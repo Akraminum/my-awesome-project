@@ -1,0 +1,2 @@
+Syntax error found near Numbered Bind Parameter (SELECT Results Clause): SELECT ?.?, ?.?, ?.?, ?.? FROM ? LIMIT ?
+Syntax error found near Numbered Bind Parameter (SELECT Results Clause): SELECT ?.?, ?.?, ?.?, ?.? FROM ?

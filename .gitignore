@@ -278,3 +278,5 @@ my_awesome_project/media/
 # .env
 # .envs/*
 # !.envs/.local/
+
+tmp/

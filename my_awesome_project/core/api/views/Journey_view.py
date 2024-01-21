@@ -1,5 +1,7 @@
 from drf_spectacular.utils import extend_schema
 from rest_framework import viewsets
+from rest_framework.response import Response
+
 
 from my_awesome_project.core.api.serializers.journey.list import JourneyListSerializer
 from my_awesome_project.core.models import Journey
@@ -9,6 +11,23 @@ from my_awesome_project.core.models import Journey
 class JourneyViewSet(viewsets.ModelViewSet):
     queryset = Journey.objects.all()
     serializer_class = JourneyListSerializer
+
+    def paginate_queryset(self, queryset):
+        return super().paginate_queryset(queryset)
+    
+    def get_serializer(self, *args, **kwargs):
+        return super().get_serializer(*args, **kwargs)
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = JourneyListSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = JourneyListSerializer(queryset, many=True)
+        return Response(serializer.data)
 
     # queryset_map = {
     #     'list': Journey.objects.list,

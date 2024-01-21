@@ -9,3 +9,12 @@ class JourneyListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Journey
         fields = ("id", "name", "goals_count", "created")
+
+
+    def validate(self, data):
+        if not data.get("name"):
+            raise serializers.ValidationError("Name is required")
+        return data
+    
+    def to_representation(self, instance):
+        return super().to_representation(instance)

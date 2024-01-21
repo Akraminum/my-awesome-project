@@ -1,0 +1,20 @@
+appmap_dir: tmp/appmap
+language: python
+name: my-awesome-project
+packages:
+- path: docs
+- path: my_awesome_project
+
+- path: config
+
+- dist: djangorestframework
+  path: rest_framework.serializers
+
+
+- dist: django
+  path: django.db
+
+
+
+  # exclude:
+  # - django.db
